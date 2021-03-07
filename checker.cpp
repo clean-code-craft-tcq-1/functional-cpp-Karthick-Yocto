@@ -12,9 +12,10 @@ const float SOC_MAX_THRESHOLD =100;
 const float CHARGE_RATE_MIN_THRESHOLD = 0.00f;
 const float CHARGE_RATE_MAX_THRESHOLD =0.80f;
 
-bool checkValueInRange(float min, float max, const float &valueToCheck, const std::string &paramName)
+bool checkValueInRange(float min, float max, const float &valueToCheck)
 {
-	if (valueToCheck >= min && valueToCheck <= max) return true;
+	if (valueToCheck >= min && valueToCheck <= max) 
+		return true;
 	else
 	{
 		std::cout << paramName << " out of range!" << endl;
@@ -24,17 +25,17 @@ bool checkValueInRange(float min, float max, const float &valueToCheck, const st
 
 bool TemperatureIsOk(const float temperature)
 {
-	return checkValueInRange(TEMP_MIN_THRESHOLD, TEMP_MAX_THRESHOLD, temperature, "Temperature");
+	return checkValueInRange(TEMP_MIN_THRESHOLD, TEMP_MAX_THRESHOLD, temperature);
 }
 
 bool SocIsOk(const float soc)
 {
-	return checkValueInRange(SOC_MIN_THRESHOLD, SOC_MAX_THRESHOLD, soc, "State of Charge");
+	return checkValueInRange(SOC_MIN_THRESHOLD, SOC_MAX_THRESHOLD, soc);
 }
 
 bool ChargeRateIsOk(const float chargeRate)
 {
-	return checkValueInRange(CHARGE_RATE_MIN_THRESHOLD, CHARGE_RATE_MAX_THRESHOLD, chargeRate, "Charge Rate");
+	return checkValueInRange(CHARGE_RATE_MIN_THRESHOLD, CHARGE_RATE_MAX_THRESHOLD, chargeRate);
 }
 
 bool batteryIsOk(const float temperature, const  float soc, const  float chargeRate) {
