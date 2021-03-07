@@ -1,7 +1,5 @@
-#include "stdafx.h"
 #include <assert.h>
 #include <iostream>
-#include <string.h>
 #include <string>
 using namespace std;
 
