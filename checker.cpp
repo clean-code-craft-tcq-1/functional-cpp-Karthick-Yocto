@@ -3,14 +3,14 @@
 #include <string>
 using namespace std;
 
-const float TEMP_MIN_THRESHOLD =0.00f;
-const float TEMP_MAX_THRESHOLD =45.00f;
+const float TEMP_MIN_THRESHOLD =0.0F;
+const float TEMP_MAX_THRESHOLD =45.0F;
 
-const float SOC_MIN_THRESHOLD = 1.00f;
-const float SOC_MAX_THRESHOLD =100.00f;
+const float SOC_MIN_THRESHOLD = 20.0F;
+const float SOC_MAX_THRESHOLD =80.0F;
 
-const float CHARGE_RATE_MIN_THRESHOLD = 0.00f;
-const float CHARGE_RATE_MAX_THRESHOLD =0.80f;
+const float CHARGE_RATE_MIN_THRESHOLD = 0.00F;
+const float CHARGE_RATE_MAX_THRESHOLD =0.80F;
 
 bool checkValueInRange(float min, float max, const float &valueToCheck)
 {
