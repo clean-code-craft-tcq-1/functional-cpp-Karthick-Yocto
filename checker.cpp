@@ -18,7 +18,7 @@ bool checkValueInRange(float min, float max, const float &valueToCheck)
 		return true;
 	else
 	{
-		std::cout << paramName << " out of range!" << endl;
+		std::cout << " out of range!" << endl;
 		return false;
 	}
 }
